@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$alec-website-primary: mat-palette($mat-grey, 600);
+$alec-website-accent: mat-palette($mat-indigo);
+$alec-website-warn: mat-palette($mat-red);
+$alec-website-theme: mat-dark-theme($alec-website-primary, $alec-website-accent, $alec-website-warn);
+
+@include angular-material-theme($alec-website-theme);
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: mat-color($mat-grey, 400, 0.6);
+}
+

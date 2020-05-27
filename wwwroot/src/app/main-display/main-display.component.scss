@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 60%
+}
+
+.header-image {
+  background-image: url('../../assets/me.jpeg');
+  background-size: cover;
+}

@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-palette-cadet-blue: (
+    50 : #e4e5e8,
+    100 : #bbbec6,
+    200 : #8e92a0,
+    300 : #60667a,
+    400 : #3e465e,
+    500 : #1c2541,
+    600 : #19213b,
+    700 : #141b32,
+    800 : #11162a,
+    900 : #090d1c,
+    A100 : #5d76ff,
+    A200 : #2a4aff,
+    A400 : #0026f6,
+    A700 : #0022dc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$custom-palette-cello-blue: (
+    50 : #e7eaed,
+    100 : #c4cbd3,
+    200 : #9da8b5,
+    300 : #758597,
+    400 : #586a81,
+    500 : #3a506b,
+    600 : #344963,
+    700 : #2c4058,
+    800 : #25374e,
+    900 : #18273c,
+    A100 : #7dafff,
+    A200 : #4a90ff,
+    A400 : #1771ff,
+    A700 : #0062fc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-custompalette-big-ol-ruby: (
+    50 : #f3e6e9,
+    100 : #e2c2c8,
+    200 : #cf99a3,
+    300 : #bb707e,
+    400 : #ad5162,
+    500 : #9e3246,
+    600 : #962d3f,
+    700 : #8c2637,
+    800 : #821f2f,
+    900 : #701320,
+    A100 : #ffa7b1,
+    A200 : #ff7483,
+    A400 : #ff4156,
+    A700 : #ff2740,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$custom-palette-ghost-white: (
+    50 : #fefeff,
+    100 : #fdfdff,
+    200 : #fcfcff,
+    300 : #fafaff,
+    400 : #f9f9ff,
+    500 : #f8f8ff,
+    600 : #f7f7ff,
+    700 : #f6f6ff,
+    800 : #f5f5ff,
+    900 : #f3f3ff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$alec-website-primary: mat-palette($custom-palette-cadet-blue);
+$alec-website-accent: mat-palette($custom-palette-cello-blue);
+$alec-website-warn: mat-palette($md-custompalette-big-ol-ruby);
+$alec-website-theme: mat-dark-theme($alec-website-primary, $alec-website-accent, $alec-website-warn);
+
+@include angular-material-theme($alec-website-theme);
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: mat-color($custom-palette-ghost-white);
+}

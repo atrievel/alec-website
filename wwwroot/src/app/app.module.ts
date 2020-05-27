@@ -12,6 +12,7 @@ import { MainDisplayNavigationComponent } from './main-display-navigation/main-d
 import { ProjectsDisplayComponent } from './projects-display/projects-display.component';
 import { BlogsDisplayComponent } from './blogs-display/blogs-display.component';
 import { ResumeDisplayComponent } from './resume-display/resume-display.component';
+import { MaintenanceSplashPageComponent } from './maintenance-splash-page/maintenance-splash-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResumeDisplayComponent } from './resume-display/resume-display.componen
     MainDisplayNavigationComponent,
     ProjectsDisplayComponent,
     BlogsDisplayComponent,
-    ResumeDisplayComponent
+    ResumeDisplayComponent,
+    MaintenanceSplashPageComponent
   ],
   imports: [
     BrowserModule,
